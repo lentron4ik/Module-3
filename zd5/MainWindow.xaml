@@ -1,0 +1,30 @@
+﻿<Window x:Class="zd5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zd5"
+        mc:Ignorable="d"
+        Title="Сортировка чисел" Height="341" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Введите числа (через запятую):" Margin="0,0,0,5"/>
+            <TextBox x:Name="NumbersTextBox" Width="300" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Выберите метод сортировки:" Margin="0,0,0,5"/>
+            <ComboBox x:Name="SortingMethodComboBox" Margin="0,0,0,10">
+                <ComboBoxItem Content="Сортировка пузырьком"/>
+                <ComboBoxItem Content="Быстрая сортировка"/>
+            </ComboBox>
+
+            <Button Content="Сортировать" Click="SortButton_Click" Margin="0,0,0,10"/>
+            <TextBlock Text="Отсортированные числа:" Margin="0,0,0,5"/>
+            <TextBox x:Name="SortedNumbersTextBox" Width="300" 
+                     IsReadOnly="False" Height="79"
+                     TextWrapping="Wrap"/>
+
+            <TextBlock Padding="3">Время сортировки</TextBlock>
+            <TextBox x:Name="SortTimeTextBlock" Margin="10" FontWeight="Bold" IsReadOnly="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
